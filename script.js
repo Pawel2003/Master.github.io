@@ -105,12 +105,12 @@ function generateform(x) {
         }
         main += '<div>';
         for (let k = 0; k < 35; k++) {
-            if (i == 0 && k == 0) {
-                main += '<input type="text" oninput="tonext(' + i + ',' + k + ')" onkeydown="happening(' + i + ',' + k + ',event)" class="input-text" size="1" maxlength="1" autofocus />';
-            }
-            else {
+            //if (i == 0 && k == 0) {
+            //    main += '<input type="text" oninput="tonext(' + i + ',' + k + ')" onkeydown="happening(' + i + ',' + k + ',event)" class="input-text" size="1" maxlength="1" autofocus />';
+            //}
+           // else {
                 main += '<input type="text" oninput="tonext(' + i + ',' + k + ')" onkeydown="happening(' + i + ',' + k + ',event)" class="input-text" size="1" maxlength="1" />';
-            }
+            //}
         }
         main += '</div><br />';
     }
@@ -126,6 +126,7 @@ function formi() {
     const todays = new Date();
     s = todays.getHours() * 3600 + todays.getMinutes() * 60 + todays.getSeconds();
     form.innerHTML = main;
+    il[0].focus();
 }
 
 
